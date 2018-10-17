@@ -120,6 +120,11 @@ Vampires.find({victims: {$elemMatch: {$gt: 150, $lt: 500}}}, (err, vamp) =>{
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
+Vampires.find({title: {$exists: true}}, (err, vamp) =>{
+	console.log(vamp);
+	mongoose.connection.close();
+});
+
 /////////////////////////////////////////////////
 // ### Select with OR
 
