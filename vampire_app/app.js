@@ -9,6 +9,7 @@ Vampires.collection.insertMany(vampireData, (err, data) => {
 	mongoose.connection.close();
 });
 
+
 // 2. Require your model (and possibly your extra data source);
 
 // 3. Connect your database and collection name
@@ -82,6 +83,8 @@ Vampires.create({
 	if(err) console.log(err);
 	else console.log(vampire);
 });
+
+Vampires.find({}, (err, vamp) => {console.log(vamp)});
 
 /////////////////////////////////////////////////
 // ## QUERYING
