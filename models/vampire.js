@@ -5,10 +5,10 @@ const vampireSchema = new mongoose.Schema({
 	hair_color: {type: String, default: 'blonde'},
 	eye_color: String,
 	dob: Date,
-	loves: [{thing: String}]
+	loves: [String],
 	location: String,
 	gender: String,
 	victims: {type: Number, min: 0}
 });
 
-module.exports = mongoose.model('Vampire', vampireSchema);
+module.exports = mongoose.model('Vampires', vampireSchema);

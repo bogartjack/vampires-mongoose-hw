@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = 'mongodb://localhost/fruit';
+const connectionString = 'mongodb://localhost/vampires';
 
 mongoose.connect(connectionString, {useNewUrlParser: true});
 
@@ -15,3 +15,5 @@ mongoose.connection.on('disconnected', ()=>{
 mongoose.connection.on('error', (err)=>{
 	console.log('mongoose connection error: '+err);
 });
+
+
