@@ -7,5 +7,6 @@ const vampireController = require('./controllers/vampires');
 
 app.use(bodyParser.urlencoded({extended: false});
 app.use(methodOverride('_method');
-app.use(
+app.use('/vampires', vampireController);
+
 
