@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Vampire Show Page</h1>
+  <h1><%= vamp.name %></h1>
+  	<ul>
+		<li><%=vamp.hair_color%></li>
+		<li><%=vamp.eye_color%></li>
+		<li><%=vamp.dob%></li>
+		<li>loves:</li>
+		<ul>
+		<% for(let i=0;i<vamp.loves.length;i++){ %>
+			<li><%=vamp.loves[i]%></li>
+		<%}%>
+		</ul>
+		<li><%=vamp.victims%></li>
+	</ul> 
+	<a href='/vampires/'>Check out other vampires</a>
+</body>
+</html>

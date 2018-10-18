@@ -6,10 +6,9 @@ router.get('/', (req, res) => {
 	Vampires.find({}, (err, allVamps) =>{
 		if(err) console.log(err);
 		else {
-			console.log(allVamps);
 			res.render('index.ejs', {vamps: allVamps});
 		}
-	}
+	});
 });
 
 router.get('/new', (req, res) =>{
@@ -42,9 +41,10 @@ router.delete('/:id', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-	Vampires.findByIdAndUpdate(req.params.id, req.body, (err, updateVamp) =>{
+	Vampires.findByIdAndUpdate(req.params.id, req.body, { '$push': {'loves': req.body.loves}}, (err, updateVamp) =>{
 		res.redirect('/vampires');
-	});
+
+	}); 
 });
 
 module.exports = router;

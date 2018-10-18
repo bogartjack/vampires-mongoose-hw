@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Vampires</h1>
+        <ul>
+            <% for(let i = 0; i < vamps.length; i++){ %>
+                <li>
+                  The <a href="/vampires/<%=vamps[i].id%>"><%=vamps[i].name; %></a> has <%=vamps[i].victims; %>.
+                  <form action="/vampires/<%=vamps[i].id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="delete">
+                  </form>
+                  <a href="/vampires/<%=vamps[i].id%>/edit">Edit <%=vamps[i].name%></a>
+                </li>
+            <% } %>
+        </ul>
+        <nav>
+            <a href="/vampires/new">New Vampire</a>
+        </nav>
+    </body>
+</html>

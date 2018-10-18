@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Vampire Page</h1>
+        <form method="POST" action="/vampires/<%=vamp.id%>?_method=PUT">
+            Name: <input type="text" name="name" value="<%=vamp.name%>"/><br/>
+            Hair Color: <input type="text" name="hair_color" value="<%=vamp.hair_color%>"/><br/>
+            Eye Color: <input type="text" name="eye_color" value="<%=vamp.eye_color%>"/><br/>
+	    DOB: <input type="date" name="dob" value="<%=vamp.dob%>"/><br/>
+	    Loves: <input type="text" name ="loves" value="add a love"/><br/>
+	    Location: <input type="text" name="location" value="<%=vamp.location%>"/><br/>
+	    Gender: <input type="text" name="gender" value="enter m or f"/><br/>
+	    Victims: <input type="text" name="victims" value="add a victim"/><br/>
+	    <br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+ 
+    </body>
+</html>
