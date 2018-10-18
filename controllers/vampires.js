@@ -16,7 +16,7 @@ router.get('/new', (req, res) =>{
 });
 
 router.post('/', (req, res) => {
-	Vampires.create(req.body, (err, createdVamp) =>{
+	Vampires.create(req.body, {'$push':{'lives':req.body.loves}}, (err, createdVamp) =>{
 		if (err) console.log(err);
 		else res.redirect('/vampires');
 	});
